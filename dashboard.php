@@ -16,76 +16,57 @@
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
-    <section class="home-section">
-		<nav>
-			<div class="sidebar-button">
-				<i class="bx bx-menu sidebarBtn"></i>
-			</div>
-			<div class="profile-details">
-				<span class="admin_name">Admin</span>
-			</div>
-		</nav>
-		<div class="home-content">
-			<div class="home-content">
-				<h2 id="text"></h2>
-				<h3 id="date"></h3>
-			 </div>
-			 
-		</div>
-	</section>
-    <script>
-		let sidebar = document.querySelector(".sidebar");
-		let sidebarBtn = document.querySelector(".sidebarBtn");
-		sidebarBtn.onclick = function () {
-		 sidebar.classList.toggle("active");
-			if (sidebar.classList.contains("active")) {
-			 sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-			} else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-		};
-		function myFunction() {
-		   const months = ["Januari", "Februari", "Maret", "April", "Mei",
-					"Juni", "Juli", "Agustus", "September", "Oktober",
-					"November", "Desember"];
-		   const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis",
-						"Jumat", "Sabtu"];
-		   let date = new Date();
-		   jam = date.getHours();
-		 tanggal = date.getDate();
-		 hari = days[date.getDay()];
-		 bulan = months[date.getMonth()];
-		 tahun = date.getFullYear();
-	 
-		 let m = date.getMinutes();
-		 let s = date.getSeconds();
-		 m = checkTime(m);
-		 s = checkTime(s);
-		 document.getElementById("date").innerHTML = `${hari}, 
-		   ${tanggal} ${bulan} ${tahun}, ${jam}:${m}:${s}`;
-		 requestAnimationFrame(myFunction);
-		}
-		function checkTime(i) {
-		 if (i < 10) {
-			i = "0" + i;
-		 }
-		 return i;
-		}
-		window.onload = function () {
-		 let nama = prompt("Masukkan Nama Anda : ", "Admin");
-		 let jam = new Date().getHours();
-		 if (nama != null) {
-			if (jam >= 4 && jam <= 10) {
-			 document.getElementById("text").innerHTML = `Selamat Pagi ${nama}`;
-			} else if (jam >= 11 && jam <= 14) {
-			 document.getElementById("text").innerHTML = `Selamat Siang ${nama}`;
-			} else if (jam >= 15 && jam <= 18) {
-			 document.getElementById("text").innerHTML = `Selamat Sore ${nama}`;
-			} else {
-			 document.getElementById("text").innerHTML = `Selamat Malam ${nama}`;
-			}
-			 }
-		  myFunction();
-		 };
-	 </script>
-    
+    <div class="home-section">
+        <div class="home-content">
+            <div class="widget">
+                <h2>Data Layanan</h2>
+                <div class="grid-container">
+                    <?php
+                    // Include file koneksi.php
+                    require_once 'koneksi.php';
+
+                    // Query untuk mengambil data layanan
+                    $layananQuery = mysqli_query($koneksi, "SELECT * FROM tb_layanan");
+
+                    // Cek jika kueri berhasil
+                    if ($layananQuery) {
+                        // Loop untuk menampilkan data layanan dalam grid card
+                        while ($layanan = mysqli_fetch_assoc($layananQuery)) {
+                            echo '<div class="grid-item">';
+                            echo '<h3>' . $layanan['jenis_layanan'] . '</h3>';
+                            echo '<p>' . $layanan['deskripsi'] . '</p>';
+                            echo '</div>';
+                        }
+                    } else {
+                        echo '<p>Error fetching data from database.</p>';
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="widget">
+                <h2>Data Transaksi</h2>
+                <div class="grid-container">
+                    <?php
+                    // Query untuk mengambil data transaksi
+                    $transaksiQuery = mysqli_query($koneksi, "SELECT * FROM tb_transaksi");
+
+                    // Cek jika kueri berhasil
+                    if ($transaksiQuery) {
+                        // Loop untuk menampilkan data transaksi dalam grid card
+                        while ($transaksi = mysqli_fetch_assoc($transaksiQuery)) {
+                            echo '<div class="grid-item">';
+                            echo '<h3>' . $transaksi['nama'] . '</h3>';
+                            echo '<p>' . $transaksi['tanggal'] . '</p>';
+                            echo '<p>Rp. ' . number_format($transaksi['harga'], 0, ',', '.') . '</p>';
+                            echo '</div>';
+                        }
+                    } else {
+                        echo '<p>Error fetching data from database.</p>';
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

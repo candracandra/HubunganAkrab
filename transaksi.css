@@ -3,22 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Sidebar Styles */
 .sidebar {
     height: 100%;
     width: 250px;
@@ -27,7 +13,6 @@ h1 {
     left: 0;
     background-color: #333;
     padding-top: 20px;
-    overflow-y: auto;
 }
 
 .sidebar h2 {
@@ -49,7 +34,7 @@ h1 {
     display: block;
     padding: 10px 20px;
     transition: background-color 0.3s;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
@@ -57,30 +42,9 @@ h1 {
     background-color: #555;
 }
 
-/* Transaction List Styles */
-.transaction-list table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.transaction-list th,
-.transaction-list td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.transaction-list th {
-    background-color: #f2f2f2;
-    color: #333;
-    text-align: left;
-}
-
-.transaction-list tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.transaction-list tbody tr:hover {
-    background-color: #e2e2e2;
+.container {
+    margin-left: 250px;
+    padding: 20px;
 }
 
 .add-button {
@@ -100,25 +64,63 @@ h1 {
     background-color: #45a049;
 }
 
+.transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-list th, .transaction-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-list th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.transaction-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.print-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #a04545;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover{
+    background-color: #45a049;
+}
+.delete-btn:hover {
+    background-color: #45a049;
+}
+
 /* Media query for responsive layout */
 @media screen and (max-width: 600px) {
     .container {
-        max-width: 100%;
-        padding: 0 10px;
+        margin-left: 0;
+        padding: 10px;
     }
 
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
-    }
-
-    .transaction-list th,
-    .transaction-list td {
-        padding: 8px;
-    }
-
-    .add-btn {
-        padding: 8px 16px;
     }
 }
