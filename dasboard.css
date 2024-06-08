@@ -60,10 +60,6 @@ body {
         position: relative;
     }
 
-    .sidebar ul li {
-        text-align: center;
-    }
-
     .sidebar ul li a {
         padding: 10px;
     }
