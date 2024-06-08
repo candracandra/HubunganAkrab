@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+h2 {
+    color: #333;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds sidebar height */
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Service Types Styles */
+.service-types {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.service-types h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-types ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-types ul li {
+    padding: 10px 0;
+}
+
+.service-types ul li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.service-types ul li a:hover {
+    background-color: #eee;
+}
+
+/* CRUD Section Styles */
+.crud-section {
+    margin-top: 20px;
+}
+
+.crud-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#service-form {
+    margin-bottom: 20px;
+}
+
+#service-form input[type="text"],
+#service-form input[type="number"],
+#service-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#service-form button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#service-form button:hover {
+    background-color: #333;
+}
+
+#service-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#service-table th,
+#service-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+#service-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

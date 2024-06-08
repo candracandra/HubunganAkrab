@@ -1,0 +1,119 @@
+/* layanan.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.add-button {
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-list th, .transaction-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-list th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.transaction-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Edit and Delete Button Styles */
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #45a049;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}

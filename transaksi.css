@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Transaction List Styles */
+.transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-list th,
+.transaction-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-list th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+.transaction-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.transaction-list tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+.add-button {
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .transaction-list th,
+    .transaction-list td {
+        padding: 8px;
+    }
+
+    .add-btn {
+        padding: 8px 16px;
+    }
+}

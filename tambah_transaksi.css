@@ -1,0 +1,132 @@
+/* tambah_transaksi.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.content h2 {
+    color: #333;
+}
+
+/* CRUD Section Styles */
+.crud-section {
+    margin-top: 20px;
+}
+
+.crud-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#service-form {
+    margin-bottom: 20px;
+}
+
+#service-form input[type="text"],
+#service-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#service-form button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#service-form button:hover {
+    background-color: #333;
+}
+
+#service-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#service-table th,
+#service-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+#service-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    #service-form input[type="text"],
+    #service-form textarea {
+        width: calc(100% - 20px); /* Adjust input width */
+    }
+
+    #service-form button {
+        width: 100%;
+    }
+}

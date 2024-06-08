@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungan Akrab - Login</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header>
-        <h1>Silakan Login</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
-    <main>
-        <form action="login_process.php" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Login">
-        </form>
-        <p>Belum punya akun? <a href="register.html">Daftar disini</a></p>
-    </main>
+
+<div class="container">
+    <form action="submit_login.php" method="POST">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </form>
+</div>
+
 </body>
 </html>
+
