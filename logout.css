@@ -111,16 +111,3 @@ body {
     background-color: #45a049;
 }
 
-/* Media query for responsive layout */
-@media screen and (max-width: 600px) {
-    .container {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-}
