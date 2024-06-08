@@ -10,17 +10,17 @@
     <div class="sidebar">
         <h2>HUBUNGAN AKRAB</h2>
         <ul>
-            <li><a href="dasboard.html">Dashboard</a></li>
-            <li><a href="layanan.html">Jenis Layanan</a></li>
-            <li><a href="transaksi.html">Transaksi</a></li>
-            <li><a href="logout.html">Logout</a></li>
+            <li><a href="dasboard.php">Dashboard</a></li>
+            <li><a href="layanan.php">Jenis Layanan</a></li>
+            <li><a href="transaksi.php">Transaksi</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 
     <div class="container">
         <h1>Transaksi</h1>
         <div class="add-button">
-            <a href="tambah_transaksi.html" class="add-btn">Tambah Transaksi</a>
+            <a href="tambah_transaksi.php" class="add-btn">Tambah Transaksi</a>
         </div>
         <div class="transaction-list">
             <table>

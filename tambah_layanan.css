@@ -162,3 +162,67 @@ a {
         padding: 20px;
     }
 }
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+/* Content Styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.crud-section {
+    margin-top: 20px;
+}
+
+.crud-section input[type="text"],
+.crud-section input[type="number"],
+.crud-section textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.crud-section button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+

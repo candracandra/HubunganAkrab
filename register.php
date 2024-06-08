@@ -1,25 +1,3 @@
-<?php
-// Memeriksa jika ada data register yang dikirimkan
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Memeriksa dan memperoleh nilai dari form
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-
-    // Lakukan proses validasi register di sini
-    // Misalnya, memeriksa apakah username atau email sudah digunakan sebelumnya, dan lain sebagainya
-
-    // Setelah validasi berhasil, Anda bisa melakukan proses penyimpanan data ke database, atau lainnya
-
-    // Untuk contoh sederhana, kita hanya menampilkan data yang di-submit
-    echo "<h2>Data yang di-submit:</h2>";
-    echo "<p>Username: $username</p>";
-    echo "<p>Email: $email</p>";
-    // Jangan pernah menampilkan password dalam bentuk teks biasa, ini hanya untuk contoh
-    echo "<p>Password: $password</p>";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 <div class="container">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+    <form method="POST" action="register_proses.php">
         <h2>Register</h2>
         <div class="form-group">
             <label for="username">Username:</label>
@@ -50,7 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="confirm_password" name="confirm_password" required>
         </div>
         <button type="submit">Register</button>
-        <p>Sudah Punya Akun ? <a href="login.html"> Login Disini </a></p>
+        <p>Already have an account? <a href="login.php">Login here</a></p>
+        <?php
+        if (isset($_GET['error'])) {
+            echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
+        }
+        ?>
     </form>
 </div>
 

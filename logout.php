@@ -10,9 +10,9 @@
     <div class="sidebar">
         <h2>HUBUNGAN AKRAB</h2>
         <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="layanan.html">Jenis Layanan</a></li>
-            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="layanan.php">Jenis Layanan</a></li>
+            <li><a href="transaksi.php">Transaksi</a></li>
             <li><a id="logoutBtn" href="#">Logout</a></li>
         </ul>
     </div>

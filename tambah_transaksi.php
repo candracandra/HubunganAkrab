@@ -13,10 +13,10 @@
     <div class="sidebar">
         <h2>HUBUNGAN AKRAB</h2>
         <ul>
-            <li><a href="dasboard.html">Dashboard</a></li>
-            <li><a href="layanan.html">Jenis Layanan</a></li>
-            <li><a href="transaksi.html">Transaksi</a></li>
-            <li><a href="logout.html">Logout</a></li>
+            <li><a href="dasboard.php">Dashboard</a></li>
+            <li><a href="layanan.php">Jenis Layanan</a></li>
+            <li><a href="transaksi.php">Transaksi</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 

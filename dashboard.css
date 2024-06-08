@@ -1,0 +1,126 @@
+/* dashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.home-section {
+    margin-left: 250px; /* Adjust this value based on your sidebar width */
+    padding: 20px;
+}
+
+.home-content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.profile-details {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+.profile-details .admin_name {
+    font-weight: bold;
+}
+
+/* Sidebar button */
+.sidebar-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Prompt box styles */
+.prompt-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.prompt-box h2 {
+    margin-top: 0;
+}
+
+.prompt-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.prompt-box button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prompt-box button:hover {
+    background-color: #45a049;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 600px) {
+    .container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}
